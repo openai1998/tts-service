@@ -1,0 +1,7 @@
+version: '3'
+services:
+  volcano-tts:
+    build: ./volcano-tts
+    ports:
+      - "5050:5050"
+    restart: unless-stopped

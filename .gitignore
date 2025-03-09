@@ -3,3 +3,4 @@ dist/
 myenv/
 Historicalversion/
 .env
+logs

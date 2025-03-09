@@ -1,0 +1,38 @@
+[
+  {
+    "name": "详情标签",
+    "pattern": "<details><summary>资料\\[\\d+\\]:.+?</summary>.*?</details>",
+    "description": "过滤<details>标签包含的引用资料",
+    "is_regex": true
+  },
+  {
+    "name": "思考过程",
+    "pattern": "思考过程：.*?(?=\\n\\n|$)",
+    "description": "过滤标记为思考过程的内容",
+    "is_regex": true
+  },
+  {
+    "name": "链接标记",
+    "pattern": "Link\\s*\\n",
+    "description": "过滤单独的Link标记行",
+    "is_regex": true
+  },
+  {
+    "name": "参考资料",
+    "pattern": "参考资料：.*?(?=\\n\\n|$)",
+    "description": "过滤参考资料部分",
+    "is_regex": true
+  },
+  {
+    "name": "引用块",
+    "pattern": ">\\s.*?(?=\\n\\n|$)",
+    "description": "过滤Markdown引用块",
+    "is_regex": true
+  },
+  {
+    "name": "固定文本",
+    "pattern": "这段文本不需要转换为语音",
+    "description": "过滤特定的固定文本",
+    "is_regex": false
+  }
+]

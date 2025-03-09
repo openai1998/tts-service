@@ -59,3 +59,172 @@
 2025-03-10 00:06:02,472 - volcano_tts - INFO - 成功生成音频段落, 大小: 141357 字节, 耗时: 1.13秒
 2025-03-10 00:06:02,474 - volcano_tts - INFO - 成功生成完整音频, 大小: 141357 字节, 耗时: 1.13秒
 2025-03-10 00:06:02,475 - request - INFO - 请求完成 [1741536361.3402224] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.1351秒
+2025-03-10 00:08:21,084 - request - INFO - 请求开始 [1741536501.0842023] - GET /v1/audio/voices - 客户端: 172.25.0.1
+2025-03-10 00:08:21,089 - request - INFO - 请求完成 [1741536501.0842023] - GET /v1/audio/voices - 状态码: 200 - 耗时: 0.0055秒
+2025-03-10 00:08:21,116 - request - INFO - 请求开始 [1741536501.1167324] - GET /v1/audio/models - 客户端: 172.25.0.1
+2025-03-10 00:08:21,120 - request - INFO - 请求完成 [1741536501.1167324] - GET /v1/audio/models - 状态码: 404 - 耗时: 0.0033秒
+2025-03-10 00:08:31,847 - request - INFO - 请求开始 [1741536511.8476505] - GET /v1/audio/voices - 客户端: 172.25.0.1
+2025-03-10 00:08:31,853 - request - INFO - 请求完成 [1741536511.8476505] - GET /v1/audio/voices - 状态码: 200 - 耗时: 0.0056秒
+2025-03-10 00:11:51,543 - request - INFO - 请求开始 [1741536711.5438306] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:11:51,548 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=139, stream=False
+2025-03-10 00:11:51,549 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:11:51,553 - volcano_tts - INFO - 处理文本段落: text_length=139, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:11:51,558 - volcano_tts - DEBUG - 请求负载: {"text": "我是xAI基于Transformer架构开发的一款多模态智能对话系统。Transformer是一种自注意力机制（SelfAttention Mechanism）优化的神经网络结构，能够处理序列数据并且具有强大的表达能力。\n在我的内部实现中，我使用了一些开源的库和框架，如：\n1.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:11:52,544 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:11:52,546 - volcano_tts - INFO - 成功生成音频段落, 大小: 194541 字节, 耗时: 0.99秒
+2025-03-10 00:11:52,547 - volcano_tts - INFO - 成功生成完整音频, 大小: 194541 字节, 耗时: 1.00秒
+2025-03-10 00:11:52,548 - request - INFO - 请求完成 [1741536711.5438306] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.0047秒
+2025-03-10 00:11:52,615 - request - INFO - 请求开始 [1741536712.6155963] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:11:52,618 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=66, stream=False
+2025-03-10 00:11:52,620 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:11:52,621 - volcano_tts - INFO - 处理文本段落: text_length=66, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:11:52,622 - volcano_tts - DEBUG - 请求负载: {"text": "Hugging Face Transformers：这是一个提供了大量预训练模型和工具的平台，包括BERT、RoBERTa等。\n2.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:11:53,450 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:11:53,451 - volcano_tts - INFO - 成功生成音频段落, 大小: 76461 字节, 耗时: 0.83秒
+2025-03-10 00:11:53,452 - volcano_tts - INFO - 成功生成完整音频, 大小: 76461 字节, 耗时: 0.83秒
+2025-03-10 00:11:53,454 - request - INFO - 请求完成 [1741536712.6155963] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.8384秒
+2025-03-10 00:11:53,511 - request - INFO - 请求开始 [1741536713.5113766] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:11:53,514 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=68, stream=False
+2025-03-10 00:11:53,515 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:11:53,516 - volcano_tts - INFO - 处理文本段落: text_length=68, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:11:53,518 - volcano_tts - DEBUG - 请求负载: {"text": "TensorFlow 2.x：我基于 TensorFlow 架构开发，利用其强大的自动微分能力和 GPU 加速功能来优化我的性能。\n3.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:11:54,469 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:11:54,470 - volcano_tts - INFO - 成功生成音频段落, 大小: 91245 字节, 耗时: 0.95秒
+2025-03-10 00:11:54,473 - volcano_tts - INFO - 成功生成完整音频, 大小: 91245 字节, 耗时: 0.96秒
+2025-03-10 00:11:54,475 - request - INFO - 请求完成 [1741536713.5113766] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.9640秒
+2025-03-10 00:11:54,538 - request - INFO - 请求开始 [1741536714.5382626] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:11:54,541 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=90, stream=False
+2025-03-10 00:11:54,542 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:11:54,543 - volcano_tts - INFO - 处理文本段落: text_length=90, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:11:54,544 - volcano_tts - DEBUG - 请求负载: {"text": "Keras：这是一个高级神经网络 API，它使得我能够快速编写和训练复杂的模型。\n这些技术组合起来，让我能够处理自然语言理解、生成和对话等多种任务，并且能够保持较好的性能和稳定性。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:11:55,943 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:11:55,945 - volcano_tts - INFO - 成功生成音频段落, 大小: 169581 字节, 耗时: 1.40秒
+2025-03-10 00:11:55,946 - volcano_tts - INFO - 成功生成完整音频, 大小: 169581 字节, 耗时: 1.40秒
+2025-03-10 00:11:55,948 - request - INFO - 请求完成 [1741536714.5382626] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.4099秒
+2025-03-10 00:12:27,666 - request - INFO - 请求开始 [1741536747.6668723] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:12:27,670 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=19, stream=False
+2025-03-10 00:12:27,673 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:12:27,674 - volcano_tts - INFO - 处理文本段落: text_length=19, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:12:27,676 - volcano_tts - DEBUG - 请求负载: {"text": "我是 LLMA（大语言模型）的一部分。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:12:28,166 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:12:28,167 - volcano_tts - INFO - 成功生成音频段落, 大小: 28077 字节, 耗时: 0.49秒
+2025-03-10 00:12:28,168 - volcano_tts - INFO - 成功生成完整音频, 大小: 28077 字节, 耗时: 0.50秒
+2025-03-10 00:12:28,170 - request - INFO - 请求完成 [1741536747.6668723] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.5032秒
+2025-03-10 00:12:42,140 - request - INFO - 请求开始 [1741536762.1402485] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:12:42,144 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=62, stream=False
+2025-03-10 00:12:42,146 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:12:42,147 - volcano_tts - INFO - 处理文本段落: text_length=62, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:12:42,149 - volcano_tts - DEBUG - 请求负载: {"text": "我主要是文字处理和理解能力强的AI模型，我不擅长直接识别或理解图像。然而，我可以使用图像描述或文字信息来回答关于图像的问题。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:12:43,178 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:12:43,179 - volcano_tts - INFO - 成功生成音频段落, 大小: 117357 字节, 耗时: 1.03秒
+2025-03-10 00:12:43,181 - volcano_tts - INFO - 成功生成完整音频, 大小: 117357 字节, 耗时: 1.04秒
+2025-03-10 00:12:43,183 - request - INFO - 请求完成 [1741536762.1402485] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.0429秒
+2025-03-10 00:13:14,031 - request - INFO - 请求开始 [1741536794.0317738] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:13:14,035 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=66, stream=False
+2025-03-10 00:13:14,036 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:13:14,037 - volcano_tts - INFO - 处理文本段落: text_length=66, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:13:14,039 - volcano_tts - DEBUG - 请求负载: {"text": "很可能！我基于LLM（大语言模型）架构，Meta AI 是 LLMA 的发起者之一，他们开发了许多大型语言模型，包括我所基于的模型。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:13:15,040 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:13:15,041 - volcano_tts - INFO - 成功生成音频段落, 大小: 109869 字节, 耗时: 1.00秒
+2025-03-10 00:13:15,043 - volcano_tts - INFO - 成功生成完整音频, 大小: 109869 字节, 耗时: 1.01秒
+2025-03-10 00:13:15,044 - request - INFO - 请求完成 [1741536794.0317738] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.0132秒
+2025-03-10 00:15:08,017 - request - INFO - 请求开始 [1741536908.0173655] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:15:08,022 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=57, stream=False
+2025-03-10 00:15:08,024 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:15:08,025 - volcano_tts - INFO - 处理文本段落: text_length=57, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:15:08,027 - volcano_tts - DEBUG - 请求负载: {"text": "我会一些基本的句子，比如“Hello, everyone!”或者“Good morning!”等等。您想听什么呢？", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:15:08,717 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:15:08,718 - volcano_tts - INFO - 成功生成音频段落, 大小: 64173 字节, 耗时: 0.69秒
+2025-03-10 00:15:08,720 - volcano_tts - INFO - 成功生成完整音频, 大小: 64173 字节, 耗时: 0.70秒
+2025-03-10 00:15:08,721 - request - INFO - 请求完成 [1741536908.0173655] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.7041秒
+2025-03-10 00:17:28,236 - request - INFO - 请求开始 [1741537048.2361648] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:28,254 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=419, stream=False
+2025-03-10 00:17:28,262 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:17:28,268 - volcano_tts - INFO - 处理文本段落: text_length=419, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:28,271 - volcano_tts - DEBUG - 请求负载: {"text": "\n<details><summary>资料[1]: 俄乌战争  维基百科，自由的百科全书</summary>\n俄乌战争（乌克兰语：російськоукраїнська війна，罗马化：rosiiskoukrainska viina；俄语：российскоукраинская война，罗马化：rossiiskoukrainskaya voyna）是2014年起俄罗斯与乌克兰之间一场持久混合战争。2014年广场革命后，俄罗斯入侵并且并吞克里米亚、并且在顿巴斯地区鼓动和支持亲俄武装发动武装叛乱，反抗乌克兰政府；2015至2021年间，冲突维持著低强度的水平；直至2022年，俄罗斯对乌克兰发动全面入侵，导致冲突的重大升级。 · 引发战争的背景缘由众多，包括俄罗斯试图在前苏联地区重建影响力和俄罗斯的扩张主义传统、苏联解体后乌克兰当地实施的乌克兰化、去俄罗斯化政策、境内俄裔俄罗斯民族主义所致国族认同分裂、“北约东扩”引发...", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:30,097 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:30,102 - volcano_tts - INFO - 成功生成音频段落, 大小: 567597 字节, 耗时: 1.83秒
+2025-03-10 00:17:30,106 - volcano_tts - INFO - 成功生成完整音频, 大小: 567597 字节, 耗时: 1.85秒
+2025-03-10 00:17:30,109 - request - INFO - 请求完成 [1741537048.2361648] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.8728秒
+2025-03-10 00:17:30,282 - request - INFO - 请求开始 [1741537050.282799] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:30,290 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=610, stream=False
+2025-03-10 00:17:30,294 - volcano_tts - INFO - 文本已分割为 2 个段落
+2025-03-10 00:17:30,296 - volcano_tts - INFO - 处理文本段落: text_length=477, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:30,299 - volcano_tts - DEBUG - 请求负载: {"text": "Link\n</details>\n<details><summary>资料[2]: 三年后，乌克兰的灭国恶梦再度出现  BBC News 中文</summary>\n如今的基辅已经不再像三年前那样，看起来是个战争中的城市。商店已经开门营业，通勤族在上班途中也会因交通拥堵而耽搁。 · 然而，自从今年2月12日美国总统特朗普给俄罗斯总统普京打电话，从白宫向克里姆林宫送上90分钟的政治拥抱之后，2022年乌克兰面临的灭国恶梦再次回到人们眼前。\nLink\n</details>\n<details><summary>资料[3]: 乌民调显示民众对政府信赖度降至39%，反攻预期落空是悲观蔓延主因</summary>\n“一场陷入僵局的战争正考验着乌克兰人的士气。”《纽约时报》5日称，最新的民意调查显示，乌克兰人对冲突的悲观情绪正在增加，对胜利前景的乐观正在消退。报道称，虽然大多数乌克兰人依旧支持总统泽连斯基及他们的军队，但由于乌军在前线的行动陷入停滞，而西方盟国的武器支援迟迟未到且还将开始减少，这一支撑乌克兰人“对抗敌方的关键希望”逐渐被掐灭，乌民众正在动摇。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:32,310 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:32,313 - volcano_tts - INFO - 成功生成音频段落, 大小: 749613 字节, 耗时: 2.02秒
+2025-03-10 00:17:32,315 - volcano_tts - INFO - 处理文本段落: text_length=131, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:32,316 - volcano_tts - DEBUG - 请求负载: {"text": "· 虽然泽连斯基极力反驳乌克兰武装部队总司令扎卢日内最近关于冲突已陷入僵局的说法，但这一言论还是让悲观情绪在乌克兰人中发酵。《纽约时报》称，乌克兰领先的民意调查机构之一——基辅国际社会学研究所的最新调查发现，乌克兰民众对政府的信任度从今年5月的74%下降到...", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:33,835 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:33,838 - volcano_tts - INFO - 成功生成音频段落, 大小: 238893 字节, 耗时: 1.52秒
+2025-03-10 00:17:33,842 - volcano_tts - INFO - 成功生成完整音频, 大小: 988506 字节, 耗时: 3.55秒
+2025-03-10 00:17:33,848 - request - INFO - 请求完成 [1741537050.282799] - POST /v1/audio/speech - 状态码: 200 - 耗时: 3.5653秒
+2025-03-10 00:17:34,073 - request - INFO - 请求开始 [1741537054.073518] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:34,077 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=84, stream=False
+2025-03-10 00:17:34,078 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:17:34,079 - volcano_tts - INFO - 处理文本段落: text_length=84, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:34,080 - volcano_tts - DEBUG - 请求负载: {"text": "\nLink\n</details>\n<details><summary>资料[4]: 乌克兰局势升温  BBC News 中文</summary>\n© 2025 BBC.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:34,905 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:34,907 - volcano_tts - INFO - 成功生成音频段落, 大小: 83181 字节, 耗时: 0.83秒
+2025-03-10 00:17:34,911 - volcano_tts - INFO - 成功生成完整音频, 大小: 83181 字节, 耗时: 0.83秒
+2025-03-10 00:17:34,914 - request - INFO - 请求完成 [1741537054.073518] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.8412秒
+2025-03-10 00:17:34,987 - request - INFO - 请求开始 [1741537054.9874883] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:34,991 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=1319, stream=False
+2025-03-10 00:17:34,992 - volcano_tts - INFO - 文本已分割为 3 个段落
+2025-03-10 00:17:34,994 - volcano_tts - INFO - 处理文本段落: text_length=490, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:34,996 - volcano_tts - DEBUG - 请求负载: {"text": "BBC对外部网站内容不负责任。 阅读了解我们对待外部链接的做法。\nLink\n</details>\n<details><summary>资料[5]: 乌克兰  今日最新新闻和有关该话题的主要事件  俄罗斯卫星通讯社</summary>\n看关于该话题的最新新闻 乌克兰: 美国众议院议长：如果泽连斯基不醒悟，乌克兰应由他人领导, 英国将向基辅拨款超过20亿美元用于军购\nLink\n</details>\n<details><summary>资料[6]: 乌克兰 | | 联合国新闻</summary>\n乌克兰及其他地区的人民需要和平，他们现在就需要和平。必须遵循《联合国宪章》和国际法来实现和平。 · 联合国秘书长古特雷斯2022年8月24日的发言\nLink\n</details>\n<details><summary>资料[7]: 乌克兰冲突两年整，“这场战争根本就不应该开始” | | 1联合国新闻</summary>\nWeibo Twitter 打印 电子邮件 · 在乌克兰实现和平似乎仍然遥不可及，但数千名联合国工作人员仍在继续为民众提供支持，即便他们身处每天遭受攻击的前线城镇。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:37,004 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:37,008 - volcano_tts - INFO - 成功生成音频段落, 大小: 671469 字节, 耗时: 2.01秒
+2025-03-10 00:17:37,013 - volcano_tts - INFO - 处理文本段落: text_length=448, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:37,016 - volcano_tts - DEBUG - 请求负载: {"text": "Link\n</details>\n<details><summary>资料[8]: 乌克兰的自由、繁荣和安全的未来  美国驻华大使馆和领事馆</summary>\nAn official website of the United States government · Official websites use .gov A .gov website belongs to an official government organization in the United States\nLink\n</details>\n<details><summary>资料[9]: Mfa</summary>\n中华人民共和国外交部 版权所有 联系我们 地址：北京市朝阳区朝阳门南大街2号 邮编：100701 电话：+861065961114 网站标识码：bm02000004 京ICP备06038296号 京公网安备11040102700114 · 您即将离开外交部门户网站，跳转到其他网站， 是否继续访问？", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:38,584 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:38,589 - volcano_tts - INFO - 成功生成音频段落, 大小: 497901 字节, 耗时: 1.58秒
+2025-03-10 00:17:38,592 - volcano_tts - INFO - 处理文本段落: text_length=379, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:38,594 - volcano_tts - DEBUG - 请求负载: {"text": "Link\n</details>\n<details><summary>资料[10]: 最新播报乌克兰局势新华网</summary>\n新华网首页 · 专题首页 · 各方反应 · 全球连线 · 高清大图 · 最新播报\nLink\n</details>\n<details><summary>资料[11]: 乌克兰战争能否在2025年走向终局的决定因素  BBC News 中文</summary>\n图像来源，Getty Images · “我必须说，局势正在发生巨大的变化，”俄罗斯总统弗拉基米尔·普京（Vladimir Putin）在12月19日的年度记者会上表示，“整条前线都有变化。每一天都在变化。”\nLink\n</details>\n<details><summary>资料[12]: 乌克兰  BBC News 中文</summary>\n© 2025 BBC.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:40,051 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:40,055 - volcano_tts - INFO - 成功生成音频段落, 大小: 435309 字节, 耗时: 1.46秒
+2025-03-10 00:17:40,057 - volcano_tts - INFO - 成功生成完整音频, 大小: 1604679 字节, 耗时: 5.07秒
+2025-03-10 00:17:40,059 - request - INFO - 请求完成 [1741537054.9874883] - POST /v1/audio/speech - 状态码: 200 - 耗时: 5.0717秒
+2025-03-10 00:17:40,350 - request - INFO - 请求开始 [1741537060.3499374] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:40,356 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=923, stream=False
+2025-03-10 00:17:40,358 - volcano_tts - INFO - 文本已分割为 2 个段落
+2025-03-10 00:17:40,361 - volcano_tts - INFO - 处理文本段落: text_length=476, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:40,365 - volcano_tts - DEBUG - 请求负载: {"text": "BBC对外部网站内容不负责任。 阅读了解我们对待外部链接的做法。\nLink\n</details>\n<details><summary>资料[13]: 乌克兰新闻在地图上   乌克兰的战争地图liveuamap.com/cn</summary>\n乌克兰新闻在地图上   乌克兰的战争地图liveuamap.com/cn\nLink\n</details>\n<details><summary>资料[14]: 一夜之间，乌克兰局势又有这些新情况！</summary>\n调查问题加载中，请稍候。 若长时间无响应，请刷新本页面 · 俄就与乌谈判提条件 双方军队在基辅州战斗激烈\nLink\n</details>\n<details><summary>资料[15]: 乌克兰 | 联合国新闻</summary>\n联大第十一届紧急特别会议周一通过了两份有关俄乌战争的决议草案，重申其对乌克兰在其国际公认边界、包括其领水内的主权、独立、统一和领土完整的承诺。 · 近来，乌克兰发电厂频频遭受大规模袭击，能源危机不断加深，对电力、清洁水和供暖造成了影响，同时也推高了能源价格。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:41,992 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:41,995 - volcano_tts - INFO - 成功生成音频段落, 大小: 691437 字节, 耗时: 1.63秒
+2025-03-10 00:17:41,999 - volcano_tts - INFO - 处理文本段落: text_length=447, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:42,001 - volcano_tts - DEBUG - 请求负载: {"text": "联合国乌克兰人权监察团周四警告称，俄罗斯对乌克兰能源基础设施的袭击和断电，这可能会在即将到来的冬天之前再导致50万人流离失所。\nLink\n</details>\n<details><summary>资料[16]: 乌克兰国家治理：基础条件、政策选择与国家状态  国际合作中心</summary>\n内容提要：本文从国内政治视角探讨鸟克兰国家治理，并提出一个分析框架。本文认为，乌克兰国家治理之低效与其国家基础条件、政策选择和国家状态有着密切的关系。乌克兰国家治理的基础条件兼具优势与劣势，决定了国家面临地区分离主义倾向和族群分歧、经济与国防脆弱、与俄罗斯存在分歧与矛盾等问题。要解决这些问题，理想的政策选择应以公共利益最大化为取向，稳妥处理中央与地方关系，构建包容性的国家认同，推行包容多元的民族文化政策，促进经济可持续发展并在此基础上推进国防建设，以及坚持和平、中立和平衡的外交政策。然而，乌克兰独立以来的现实政策选择却距离理想方案渐行渐远，主要体现在政治激进化与地缘政治化、历史叙事和民族...", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:44,549 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:44,554 - volcano_tts - INFO - 成功生成音频段落, 大小: 791853 字节, 耗时: 2.55秒
+2025-03-10 00:17:44,558 - volcano_tts - INFO - 成功生成完整音频, 大小: 1483290 字节, 耗时: 4.20秒
+2025-03-10 00:17:44,562 - request - INFO - 请求完成 [1741537060.3499374] - POST /v1/audio/speech - 状态码: 200 - 耗时: 4.2126秒
+2025-03-10 00:17:44,784 - request - INFO - 请求开始 [1741537064.7848113] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:44,788 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=922, stream=False
+2025-03-10 00:17:44,789 - volcano_tts - INFO - 文本已分割为 2 个段落
+2025-03-10 00:17:44,790 - volcano_tts - INFO - 处理文本段落: text_length=485, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:44,791 - volcano_tts - DEBUG - 请求负载: {"text": "Link\n</details>\n<details><summary>资料[17]: 乌克兰反攻俄罗斯 中俄关系前景莫测 – 普通话主页</summary>\n连日来，乌克兰在俄罗斯库尔斯克地区的突袭反攻，标志着俄乌战争进入了新的阶段。这一战场形势的反转不仅震惊俄罗斯舆论，中国社交媒体上的相关议论也发生了微妙的变化。那么，中俄\"无上限\"的伙伴关系会因此发生什么样的变化呢？ · 综合当前国际主流媒体对俄乌战况的报道，乌克兰装甲部队自8月6日出乎意料地攻入俄罗斯防御薄弱的库尔斯克地区后，迅速扩大战线和控制区域。这一反攻行动目前已进入第二周，乌方表示已控制超过一千平方公里的土地面积。\nLink\n</details>\n<details><summary>资料[18]: 乌克兰局势：和平进展渺茫 战争暴行加剧 | | 1联合国新闻</summary>\nWeibo Twitter 打印 电子邮件 · 联合国人权事务副高级专员纳西弗周三在人权理事会通报乌克兰最新局势时表示，随着俄罗斯对乌克兰的全面入侵即将进入第三年，和平解决冲突的进展仍然遥不可及，而且敌对行动还在危险升级。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:46,169 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:46,176 - volcano_tts - INFO - 成功生成音频段落, 大小: 752877 字节, 耗时: 1.39秒
+2025-03-10 00:17:46,178 - volcano_tts - INFO - 处理文本段落: text_length=435, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:46,180 - volcano_tts - DEBUG - 请求负载: {"text": "Link\n</details>\n<details><summary>资料[19]: 俄乌战争  维基百科，自由的百科全书</summary>\n俄乌战争（乌克兰语：російськоукраїнська війна，罗马化：rosiiskoukrainska viina；俄语：российскоукраинская война，罗马化：rossiiskoukrainskaya voyna）是2014年起俄罗斯与乌克兰之间一场持久混合战争。2014年广场革命后，俄罗斯入侵并且并吞克里米亚、并且在顿巴斯地区鼓动和支持亲俄武装发动武装叛乱，反抗乌克兰政府；2015至2021年间，冲突维持着低强度的水平；直至2022年，俄罗斯对乌克兰发动全面入侵，导致冲突的重大升级。 · 引发战争的背景缘由众多，包括俄罗斯试图在前苏联地区重建影响力和俄罗斯的扩张主义传统、苏联解体后乌克兰当地实施的乌克兰化、去俄罗斯化政策、境内俄裔俄罗斯民族主义所致国族认同分裂、“北约东扩”引发...", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:48,196 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:48,199 - volcano_tts - INFO - 成功生成音频段落, 大小: 580461 字节, 耗时: 2.02秒
+2025-03-10 00:17:48,201 - volcano_tts - INFO - 成功生成完整音频, 大小: 1333338 字节, 耗时: 3.41秒
+2025-03-10 00:17:48,203 - request - INFO - 请求完成 [1741537064.7848113] - POST /v1/audio/speech - 状态码: 200 - 耗时: 3.4184秒
+2025-03-10 00:17:48,430 - request - INFO - 请求开始 [1741537068.4303038] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:17:48,442 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=1003, stream=False
+2025-03-10 00:17:48,445 - volcano_tts - INFO - 文本已分割为 3 个段落
+2025-03-10 00:17:48,449 - volcano_tts - INFO - 处理文本段落: text_length=462, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:48,452 - volcano_tts - DEBUG - 请求负载: {"text": "Link\n</details>\n</details>\n截至2025年3月9日，乌克兰局势仍然复杂且充满变数，以下是对当前局势的分析，基于最新的公开信息和动态：\n战场态势\n俄乌冲突自2022年全面升级以来，已经进入第三个年头。前线局势呈现出一定的僵持状态，但局部地区仍有激烈交火。乌克兰在2024年8月对俄罗斯库尔斯克地区发动的反攻曾短暂改变战局，显示出其军事能力的提升，尤其是在无人机和装甲部队的运用上。然而，俄罗斯在顿巴斯等东部地区的推进并未完全停滞，双方在基辅州等地仍持续交战。乌克兰军队依赖无人机技术取得了显著战果，但整体战线仍受制于兵力和资源的限制。\n国际支持的变化\n美国对乌克兰的军事援助在2025年初出现波动。特朗普政府上台后，曾暂停对基辅的军事支持，并要求乌克兰展现更多“感恩态度”，这引发了乌克兰国内外的担忧。尽管如此，欧洲国家试图填补这一空缺，例如英国承诺提供超过20亿美元的军购资金，欧盟也在探讨为期一个月的停火计划以推动和平谈判。然而，美国的角色依然关键，没有其主导，俄乌之间达成持久停火的可能性较低。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:50,691 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:50,698 - volcano_tts - INFO - 成功生成音频段落, 大小: 858285 字节, 耗时: 2.25秒
+2025-03-10 00:17:50,700 - volcano_tts - INFO - 处理文本段落: text_length=499, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:50,703 - volcano_tts - DEBUG - 请求负载: {"text": "乌克兰国内情况\n乌克兰民众对政府的信任度有所下降，部分原因是反攻预期未完全实现以及战争的长期化。基辅的生活表面上恢复了一些常态，但能源基础设施频遭袭击，电力短缺和经济压力加剧了民众的不满情绪。总统泽连斯基面临内外双重压力：一方面需维持士气和国际支持，另一方面需应对国内对战争前景的悲观情绪。\n俄罗斯的立场\n俄罗斯方面，普京近期表示前线局势“每天都在变化”，暗示其仍寻求通过军事手段巩固控制区。俄罗斯在战场上依赖朝鲜等外部力量的支援，显示其资源也并非无限。克里姆林宫对谈判的态度依然强硬，坚持要求乌克兰接受其领土诉求作为前提。\n和平前景\n目前，和平谈判的进展渺茫。联合国和其他国际机构持续呼吁停火，但俄乌双方均未表现出妥协的意愿。乌克兰强调没有美国的安全保障不会谈判，而俄罗斯则将谈判与乌克兰的“去军事化”等条件挂钩。短期内，冲突可能继续以低强度僵持为主，但若外部干预（如北约或美国政策转向）发生变化，局势可能迅速升温或降温。\n结论\n乌克兰局势的未来取决于多方博弈：乌克兰自身的军事韧性、西方支持的持续性以及俄罗斯的战略调整。当前，战争尚未看到终局的明确迹象，2025年可能是决定冲突走向的关键一年。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:52,414 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:52,422 - volcano_tts - INFO - 成功生成音频段落, 大小: 955437 字节, 耗时: 1.72秒
+2025-03-10 00:17:52,424 - volcano_tts - INFO - 处理文本段落: text_length=40, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:17:52,427 - volcano_tts - DEBUG - 请求负载: {"text": "需要密切关注特朗普政府的下一步政策、欧洲的协调能力以及战场上可能出现的意外突破。", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:17:53,205 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:17:53,211 - volcano_tts - INFO - 成功生成音频段落, 大小: 74541 字节, 耗时: 0.79秒
+2025-03-10 00:17:53,215 - volcano_tts - INFO - 成功生成完整音频, 大小: 1888263 字节, 耗时: 4.77秒
+2025-03-10 00:17:53,238 - request - INFO - 请求完成 [1741537068.4303038] - POST /v1/audio/speech - 状态码: 200 - 耗时: 4.8084秒

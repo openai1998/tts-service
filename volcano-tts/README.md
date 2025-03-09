@@ -226,3 +226,127 @@ GET /stats
 - 错误日志：记录详细的错误信息和堆栈跟踪
 
 日志文件保存在 `logs` 目录中，并通过Docker卷映射到宿主机。
+
+### 日志文件说明
+
+服务会生成以下日志文件：
+
+| 日志文件 | 说明 | 默认路径 |
+|---------|------|---------|
+| volcano-tts.log | 主日志文件，记录所有级别的日志 | /app/logs/volcano-tts.log |
+| volcano-tts-request.log | 请求日志文件，记录HTTP请求和响应 | /app/logs/volcano-tts-request.log |
+| volcano-tts-error.log | 错误日志文件，记录错误和异常 | /app/logs/volcano-tts-error.log |
+
+### 日志级别说明
+
+- **DEBUG**: 记录所有日志，包括调试信息（最详细）
+- **INFO**: 记录信息、警告、错误和严重错误
+- **WARNING**: 只记录警告、错误和严重错误
+- **ERROR**: 只记录错误和严重错误
+- **CRITICAL**: 只记录严重错误（最简略）
+
+### 日志查看方法
+
+#### 查看容器内的日志文件
+
+```bash
+# 查看主日志文件
+docker exec -it <container_name> cat /app/logs/volcano-tts.log
+
+# 查看请求日志文件
+docker exec -it <container_name> cat /app/logs/volcano-tts-request.log
+
+# 查看错误日志文件
+docker exec -it <container_name> cat /app/logs/volcano-tts-error.log
+
+# 实时查看日志更新
+docker exec -it <container_name> tail -f /app/logs/volcano-tts.log
+```
+
+#### 查看宿主机上的日志文件
+
+```bash
+# 查看主日志文件
+cat volcano-tts/logs/volcano-tts.log
+
+# 查看请求日志文件
+cat volcano-tts/logs/volcano-tts-request.log
+
+# 查看错误日志文件
+cat volcano-tts/logs/volcano-tts-error.log
+
+# 实时查看日志更新
+tail -f volcano-tts/logs/volcano-tts.log
+```
+
+### 常见问题与故障排除
+
+#### 问题：日志文件未创建
+
+**症状**：
+- 容器运行正常，但日志目录中没有日志文件
+- 日志信息只输出到控制台，不写入文件
+
+**可能原因**：
+1. 日志目录权限问题
+2. 日志配置不正确
+3. 容器中缺少必要的文件（如 `logger.py` 或 `config.py`）
+
+**解决方案**：
+1. 检查容器中的文件结构：
+   ```bash
+   docker exec -it <container_name> ls -la /app
+   ```
+
+2. 确保日志目录存在且有正确的权限：
+   ```bash
+   docker exec -it <container_name> ls -la /app/logs
+   ```
+
+3. 重新构建镜像，确保所有文件都被包含：
+   ```bash
+   docker-compose build --no-cache
+   docker-compose down
+   docker-compose up -d
+   ```
+
+#### 问题：日志未映射到宿主机
+
+**症状**：
+- 容器内有日志文件，但宿主机上看不到
+
+**可能原因**：
+1. 卷映射配置不正确
+2. 权限问题
+
+**解决方案**：
+1. 检查 `docker-compose.yml` 中的卷映射配置：
+   ```yaml
+   volumes:
+     - ./volcano-tts/logs:/app/logs
+   ```
+
+2. 确保宿主机上的目录存在：
+   ```bash
+   mkdir -p volcano-tts/logs
+   ```
+
+3. 重启容器：
+   ```bash
+   docker-compose down
+   docker-compose up -d
+   ```
+
+### 日志系统最佳实践
+
+1. **定期检查日志**：通过查看日志文件，可以及时发现和解决问题。
+
+2. **监控日志大小**：虽然已配置日志轮转，但仍需定期检查日志大小，避免磁盘空间不足。
+
+3. **调整日志级别**：
+   - 开发环境：使用 `DEBUG` 级别获取更详细的信息
+   - 生产环境：使用 `INFO` 或 `WARNING` 级别减少日志量
+
+4. **定期清理旧日志**：虽然配置了日志保留时间，但仍建议定期手动清理不再需要的旧日志文件。
+
+5. **备份重要日志**：对于重要的日志信息，建议定期备份到其他存储位置。

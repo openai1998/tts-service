@@ -10,14 +10,16 @@ import io
 import asyncio
 import concurrent.futures
 import time
-from typing import List, Generator
+from typing import List, Generator, Dict, Any
 from functools import lru_cache
 import warnings
 import urllib3
+import uuid
 
 # 导入配置和日志模块
 import config
-from logger import get_logger
+from logger import get_logger, setup_logging, request_logger, error_logger, logger
+from text_filter import filter_text, text_filter
 
 # 禁用不安全请求警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -319,6 +321,19 @@ async def create_speech(request: TTSRequest, _: bool = Depends(verify_api_key)):
 
         # 记录请求
         logger.info(f"收到TTS请求: voice={request.voice}, text_length={len(request.input)}, stream={request.stream}")
+
+        # 应用文本过滤（如果启用）
+        original_text = request.input
+        filtered_text, filtered_items = text_filter.filter_text(original_text)
+
+        # 如果有内容被过滤，记录日志
+        if filtered_items:
+            logger.info(f"已过滤 {len(filtered_items)} 处内容，原文本长度: {len(original_text)}，过滤后长度: {len(filtered_text)}")
+            for item in filtered_items:
+                logger.debug(f"过滤规则 '{item['rule_name']}' 匹配内容: {item['content'][:50]}...")
+
+        # 使用过滤后的文本
+        request.input = filtered_text
 
         # 确定语言和说话人
         lang = "zh"  # 默认中文

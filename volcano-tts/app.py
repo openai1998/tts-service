@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="Volcano TTS API")
 
 # 添加 API 密钥配置
-API_KEY = "sk-36565655"  # 修改为与 OpenWebUI 相同的 API Key
+API_KEY = "sk-564565KDA231D"  # 修改为与 OpenWebUI 相同的 API Key
 
 # 文本分段最大长度（字符数）
 MAX_TEXT_LENGTH = 500
@@ -517,7 +517,8 @@ async def create_speech(request: TTSRequest, _: bool = Depends(verify_api_key)):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/v1/voices")
-async def list_voices(_: bool = Depends(verify_api_key)):
+@app.get("/v1/audio/voices")  # 添加别名路径
+async def list_voices():  # 移除API密钥验证
     """列出所有可用的声音，格式完全兼容OpenAI"""
     voices = []
     for lang_code, voice_dict in VOICE_CONFIG.items():
@@ -537,7 +538,10 @@ async def list_voices(_: bool = Depends(verify_api_key)):
             voices.append(voice)
 
     # 返回完全兼容OpenAI格式的响应
-    return voices  # 直接返回语音列表，不包装在 object 和 data 中
+    return {
+        "object": "list",
+        "data": voices
+    }
 
 @app.get("/stats")
 async def get_stats(_: bool = Depends(verify_api_key)):

@@ -3,5 +3,30 @@ services:
   volcano-tts:
     build: ./volcano-tts
     ports:
-      - "5050:5050"
-    restart: unless-stopped
+      - "5050:5050"  # 格式: "宿主机端口:容器端口"
+    volumes:
+      - ./volcano-tts/logs:/app/logs  # 日志目录映射
+      # 可以选择挂载.env文件或直接使用环境变量
+      - ./volcano-tts/.env:/app/.env  # 配置文件映射
+    restart: unless-stopped  # 容器停止时自动重启
+    environment:
+      # 时区设置
+      - TZ=Asia/Shanghai
+
+      # 以下环境变量会覆盖.env文件中的设置
+      # API配置
+      # - API_KEY=your_api_key_here
+
+      # 服务配置
+      # - PORT=5050
+      # - HOST=0.0.0.0
+
+      # 文本处理配置
+      # - MAX_TEXT_LENGTH=500
+      # - MAX_WORKERS=5
+
+      # 日志配置
+      # - LOG_LEVEL=INFO  # 可选: DEBUG, INFO, WARNING, ERROR, CRITICAL
+      # - LOG_FILE_PATH=logs/volcano-tts.log
+      # - LOG_ROTATION=1 MB
+      # - LOG_RETENTION=30 days

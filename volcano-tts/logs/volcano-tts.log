@@ -1,0 +1,61 @@
+2025-03-10 00:04:45,350 - volcano_tts - INFO - 启动 Volcano TTS 服务，监听 0.0.0.0:5050
+2025-03-10 00:04:45,397 - volcano_tts - INFO - 处理文本段落: text_length=2, speaker=zh_male_xiaoming, lang=zh
+2025-03-10 00:04:45,401 - volcano_tts - DEBUG - 请求负载: {"text": "你好", "speaker": "zh_male_xiaoming", "language": "zh"}
+2025-03-10 00:04:45,825 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:04:45,827 - volcano_tts - INFO - 成功生成音频段落, 大小: 4269 字节, 耗时: 0.43秒
+2025-03-10 00:04:45,828 - volcano_tts - INFO - 服务预热完成，使用短语: 你好
+2025-03-10 00:04:45,828 - volcano_tts - INFO - 处理文本段落: text_length=2, speaker=zh_male_xiaoming, lang=zh
+2025-03-10 00:04:45,829 - volcano_tts - DEBUG - 请求负载: {"text": "谢谢", "speaker": "zh_male_xiaoming", "language": "zh"}
+2025-03-10 00:04:46,193 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:04:46,195 - volcano_tts - INFO - 成功生成音频段落, 大小: 4653 字节, 耗时: 0.37秒
+2025-03-10 00:04:46,195 - volcano_tts - INFO - 服务预热完成，使用短语: 谢谢
+2025-03-10 00:04:46,196 - volcano_tts - INFO - 处理文本段落: text_length=4, speaker=zh_male_xiaoming, lang=zh
+2025-03-10 00:04:46,197 - volcano_tts - DEBUG - 请求负载: {"text": "欢迎使用", "speaker": "zh_male_xiaoming", "language": "zh"}
+2025-03-10 00:04:46,459 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:04:46,461 - volcano_tts - INFO - 成功生成音频段落, 大小: 6573 字节, 耗时: 0.26秒
+2025-03-10 00:04:46,461 - volcano_tts - INFO - 服务预热完成，使用短语: 欢迎使用
+2025-03-10 00:05:57,233 - request - INFO - 请求开始 [1741536357.2336786] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:05:57,241 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=201, stream=False
+2025-03-10 00:05:57,242 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:05:57,243 - volcano_tts - INFO - 处理文本段落: text_length=201, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:05:57,244 - volcano_tts - DEBUG - 请求负载: {"text": "好的，这回写一首中英混合的悲伤民谣！中英结合可以让情感更有层次，我会保持悲伤的基调，主题定为“逝去的时光与遗憾”。以下是歌词：\n《Gone with the Rain》  \n(民谣风格，中英混合，悲伤主题)  \n(verse 1)  \n雨落窗前湿了眼，  \nMemories fade in the silence,  \n你说再见的那天，  \nLeft me lost in the distance.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:05:58,445 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:05:58,447 - volcano_tts - INFO - 成功生成音频段落, 大小: 228141 字节, 耗时: 1.20秒
+2025-03-10 00:05:58,448 - volcano_tts - INFO - 成功生成完整音频, 大小: 228141 字节, 耗时: 1.21秒
+2025-03-10 00:05:58,450 - request - INFO - 请求完成 [1741536357.2336786] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.2169秒
+2025-03-10 00:05:58,516 - request - INFO - 请求开始 [1741536358.5169098] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:05:58,519 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=100, stream=False
+2025-03-10 00:05:58,520 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:05:58,521 - volcano_tts - INFO - 处理文本段落: text_length=100, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:05:58,522 - volcano_tts - DEBUG - 请求负载: {"text": "(chorus)  \n时光走远，带走你，  \nGone with the rain, nothing’s true,  \n心还疼，梦还冷，  \nAll I have is a broken view.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:05:59,393 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:05:59,395 - volcano_tts - INFO - 成功生成音频段落, 大小: 80877 字节, 耗时: 0.87秒
+2025-03-10 00:05:59,396 - volcano_tts - INFO - 成功生成完整音频, 大小: 80877 字节, 耗时: 0.88秒
+2025-03-10 00:05:59,397 - request - INFO - 请求完成 [1741536358.5169098] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.8804秒
+2025-03-10 00:05:59,454 - request - INFO - 请求开始 [1741536359.4540975] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:05:59,457 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=101, stream=False
+2025-03-10 00:05:59,458 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:05:59,459 - volcano_tts - INFO - 处理文本段落: text_length=101, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:05:59,460 - volcano_tts - DEBUG - 请求负载: {"text": "(verse 2)  \n街角灯光暗了些，  \nShadows dance where you used to be,  \n我还在等一句别，  \nBut you’re gone, set me free.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:06:00,255 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:06:00,257 - volcano_tts - INFO - 成功生成音频段落, 大小: 79149 字节, 耗时: 0.80秒
+2025-03-10 00:06:00,258 - volcano_tts - INFO - 成功生成完整音频, 大小: 79149 字节, 耗时: 0.80秒
+2025-03-10 00:06:00,260 - request - INFO - 请求完成 [1741536359.4540975] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.8067秒
+2025-03-10 00:06:00,350 - request - INFO - 请求开始 [1741536360.3505278] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:06:00,353 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=90, stream=False
+2025-03-10 00:06:00,354 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:06:00,355 - volcano_tts - INFO - 处理文本段落: text_length=90, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:06:00,356 - volcano_tts - DEBUG - 请求负载: {"text": "(bridge)  \n风吹过， whispers low,  \n带不回那昨日的glow，  \n泪水落，夜无边，  \nI’m alone with this pain I know.", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:06:01,276 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:06:01,278 - volcano_tts - INFO - 成功生成音频段落, 大小: 76461 字节, 耗时: 0.92秒
+2025-03-10 00:06:01,280 - volcano_tts - INFO - 成功生成完整音频, 大小: 76461 字节, 耗时: 0.93秒
+2025-03-10 00:06:01,281 - request - INFO - 请求完成 [1741536360.3505278] - POST /v1/audio/speech - 状态码: 200 - 耗时: 0.9309秒
+2025-03-10 00:06:01,340 - request - INFO - 请求开始 [1741536361.3402224] - POST /v1/audio/speech - 客户端: 172.25.0.1
+2025-03-10 00:06:01,343 - volcano_tts - INFO - 收到TTS请求: voice=zh_female_sichuan, text_length=76, stream=False
+2025-03-10 00:06:01,345 - volcano_tts - INFO - 文本已分割为 1 个段落
+2025-03-10 00:06:01,347 - volcano_tts - INFO - 处理文本段落: text_length=76, speaker=zh_female_sichuan, lang=zh
+2025-03-10 00:06:01,348 - volcano_tts - DEBUG - 请求负载: {"text": "\n这首歌用中文表达内心的痛楚，用英文点缀那种飘渺的失落感，像是雨中独自回忆的场景。你觉得如何？如果想调整中英文的比例，或者让情绪更深沉一点，可以告诉我！", "speaker": "zh_female_sichuan", "language": "zh"}
+2025-03-10 00:06:02,471 - volcano_tts - DEBUG - 响应状态: 200, 内容类型: application/json; charset=utf-8
+2025-03-10 00:06:02,472 - volcano_tts - INFO - 成功生成音频段落, 大小: 141357 字节, 耗时: 1.13秒
+2025-03-10 00:06:02,474 - volcano_tts - INFO - 成功生成完整音频, 大小: 141357 字节, 耗时: 1.13秒
+2025-03-10 00:06:02,475 - request - INFO - 请求完成 [1741536361.3402224] - POST /v1/audio/speech - 状态码: 200 - 耗时: 1.1351秒

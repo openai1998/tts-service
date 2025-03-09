@@ -55,6 +55,23 @@ LOG_RETENTION = os.getenv('LOG_RETENTION', '30 days')
 # 确保日志目录路径一致
 LOG_DIR = os.path.dirname(LOG_FILE_PATH)
 
+# 调试配置
+DEBUG_MODE = os.getenv('DEBUG_MODE', 'false').lower() in ('true', '1', 'yes', 'y', 'on')
+DEBUG_DIR = os.getenv('DEBUG_DIR', 'DEBUG')
+DEBUG_SAVE_TEXT = os.getenv('DEBUG_SAVE_TEXT', 'true').lower() in ('true', '1', 'yes', 'y', 'on')
+DEBUG_SAVE_AUDIO = os.getenv('DEBUG_SAVE_AUDIO', 'true').lower() in ('true', '1', 'yes', 'y', 'on')
+try:
+    DEBUG_MAX_FILES = int(os.getenv('DEBUG_MAX_FILES', '100'))
+except (TypeError, ValueError):
+    print("警告: DEBUG_MAX_FILES环境变量无效，使用默认值100")
+    DEBUG_MAX_FILES = 100
+
+# 确保调试目录存在
+if DEBUG_MODE:
+    os.makedirs(DEBUG_DIR, exist_ok=True)
+    os.makedirs(os.path.join(DEBUG_DIR, 'text'), exist_ok=True)
+    os.makedirs(os.path.join(DEBUG_DIR, 'audio'), exist_ok=True)
+
 # 日志级别映射
 LOG_LEVELS = {
     'DEBUG': logging.DEBUG,

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:36.045703",
+  "request_id": "a0897803",
+  "raw_request_body": "{\"input\": \"But on Sunday it was reported that two Indian men, aged 24 and 30, and a Filipino woman, aged 35, were also arrested.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "But on Sunday it was reported that two Indian men, aged 24 and 30, and a Filipino woman, aged 35, were also arrested.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

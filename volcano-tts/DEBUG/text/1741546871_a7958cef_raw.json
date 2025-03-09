@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:11.043301",
+  "request_id": "a7958cef",
+  "raw_request_body": "{\"input\": \"But don't dismay  there will be the usual weekend columns from our political analysts.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "But don't dismay  there will be the usual weekend columns from our political analysts.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

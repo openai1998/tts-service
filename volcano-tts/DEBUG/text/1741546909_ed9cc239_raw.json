@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:49.384050",
+  "request_id": "ed9cc239",
+  "raw_request_body": "{\"input\": \"\\u4e2d\\u56fd\\u516c\\u53f8\\u8d77\\u8bc9\\u8001\\u631d\\u7535\\u529b\\u516c\\u53f8\\uff0c\\u6d89\\u8d44 5.55 \\u4ebf\\u7f8e\\u5143  \\n   3 \\u6708 5 \\u65e5\\uff0c\\u8def\\u900f\\u793e\\u62a5\\u9053\\uff0c\\u4e2d\\u56fd\\u56fd\\u6709\\u4f01\\u4e1a\\u7535\\u529b\\u5efa\\u8bbe\\u96c6\\u56e2\\u7684\\u4e0b\\u5c5e\\u516c\\u53f8 Nam Ou Power \\u5728\\u65b0\\u52a0\\u5761\\u5bf9\\u8001\\u631d\\u56fd\\u5bb6\\u7535\\u529b\\u516c\\u53f8 Electricite du Laos \\u63d0\\u8d77\\u4ef2\\u88c1\\u8bc9\\u8bbc\\uff0c\\u7d22\\u8d54 5.55 \\u4ebf\\u7f8e\\u5143\\u3002\\u8fd9\\u662f\\u56e0\\u4e3a\\u8001\\u631d\\u65b9\\u9762\\u672a\\u652f\\u4ed8 Nam Ou \\u6c34\\u7535\\u9879\\u76ee\\u7684\\u8d39\\u7528\\u3002\\u8be5\\u9879\\u76ee\\u662f\\u8001\\u631d\\u6700\\u5927\\u6c34\\u7535\\u9879\\u76ee\\u4e4b\\u4e00\\uff0c\\u5360\\u5176 18 \\u5409\\u74e6\\u6c34\\u7535\\u5bb9\\u91cf\\u7684 7%\\uff0c\\u4e5f\\u662f\\u4e2d\\u56fd\\u201c\\u4e00\\u5e26\\u4e00\\u8def\\u201d\\u5021\\u8bae\\u7684\\u4e00\\u90e8\\u5206\\u3002\\u8fd9\\u662f\\u4e2d\\u56fd\\u56fd\\u4f01\\u9996\\u6b21\\u5bf9\\u8001\\u631d\\u653f\\u5e9c\\u4f01\\u4e1a\\u63d0\\u8d77\\u56fd\\u9645\\u4ef2\\u88c1\\uff0c\\u8001\\u631d\\u65b9\\u9762\\u5c1a\\u672a\\u56de\\u5e94\\u3002\\n2.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "中国公司起诉老挝电力公司，涉资 5.55 亿美元  \n   3 月 5 日，路透社报道，中国国有企业电力建设集团的下属公司 Nam Ou Power 在新加坡对老挝国家电力公司 Electricite du Laos 提起仲裁诉讼，索赔 5.55 亿美元。这是因为老挝方面未支付 Nam Ou 水电项目的费用。该项目是老挝最大水电项目之一，占其 18 吉瓦水电容量的 7%，也是中国“一带一路”倡议的一部分。这是中国国企首次对老挝政府企业提起国际仲裁，老挝方面尚未回应。\n2.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

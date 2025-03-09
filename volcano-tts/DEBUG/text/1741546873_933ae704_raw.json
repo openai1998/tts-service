@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:13.567971",
+  "request_id": "933ae704",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[8]: Holly Bowles: Father of teen who died in Laos poisonings tells BBC she was full of life</summary>\\nShaun and his family received news they were unwell through a friend  and the two mothers flew out to Thailand that night.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[8]: Holly Bowles: Father of teen who died in Laos poisonings tells BBC she was full of life</summary>\nShaun and his family received news they were unwell through a friend  and the two mothers flew out to Thailand that night.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:42.446501",
+  "request_id": "adab888a",
+  "raw_request_body": "{\"input\": \"It is unclear how many people remain ill from the suspected poisoning in Vang Vieng.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "It is unclear how many people remain ill from the suspected poisoning in Vang Vieng.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

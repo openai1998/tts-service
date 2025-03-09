@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:41.371490",
+  "request_id": "ef44ddf3",
+  "raw_request_body": "{\"input\": \"... The other four victims have been named as Simone White, a 28yearold lawyer from the UK; James Louis Hutson, a 57yearold American; and Danish citizens AnneSofie Orkild Coyman, 20, and Freja Vennervald Sorensen, 21.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "... The other four victims have been named as Simone White, a 28yearold lawyer from the UK; James Louis Hutson, a 57yearold American; and Danish citizens AnneSofie Orkild Coyman, 20, and Freja Vennervald Sorensen, 21.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

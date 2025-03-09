@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:46.318870",
+  "request_id": "81ab62fa",
+  "raw_request_body": "{\"input\": \"Adventure \\u00b7 Health & Safety \\u00b7 Features \\u00b7 Alcohol \\u00b7 Laos \\u00b7\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[19]: Eight detained in Laos over mass poisoning as families demand answers</summary>\\nEmployees at a backpacker hostel are being questioned in connection with the deaths of six foreign tourists who are thought to have consumed methanoltainted alcohol.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Adventure · Health & Safety · Features · Alcohol · Laos ·\nLink\n</details>\n<details><summary>资料[19]: Eight detained in Laos over mass poisoning as families demand answers</summary>\nEmployees at a backpacker hostel are being questioned in connection with the deaths of six foreign tourists who are thought to have consumed methanoltainted alcohol.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

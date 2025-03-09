@@ -141,6 +141,107 @@ class TextFilter:
         if not self.enabled or not text:
             return text, []
 
+        # 预处理步骤：完全移除所有<details>标签及其内容
+        # 这是最高优先级的处理，确保所有<details>内容都被移除
+        filtered_text = text
+        filtered_items = []
+
+        # 1. 处理完整的details标签 - 使用非贪婪匹配
+        details_pattern = re.compile(r'<details>.*?</details>', re.DOTALL)
+        details_matches = list(details_pattern.finditer(filtered_text))
+
+        # 从后向前替换，避免位置偏移
+        for match in reversed(details_matches):
+            start, end = match.span()
+            matched_content = match.group(0)
+            filtered_items.append({
+                'rule_name': '完整details标签',
+                'content': matched_content,
+                'position': (start, end)
+            })
+            filtered_text = filtered_text[:start] + filtered_text[end:]
+
+        # 2. 处理带summary的details标签 - 更严格的匹配
+        summary_details_pattern = re.compile(r'<details><summary>.*?</summary>.*?</details>', re.DOTALL)
+        summary_details_matches = list(summary_details_pattern.finditer(filtered_text))
+        for match in reversed(summary_details_matches):
+            start, end = match.span()
+            matched_content = match.group(0)
+            filtered_items.append({
+                'rule_name': '带summary的details标签',
+                'content': matched_content,
+                'position': (start, end)
+            })
+            filtered_text = filtered_text[:start] + filtered_text[end:]
+
+        # 3. 处理不完整的details开始标签
+        start_pattern = re.compile(r'<details>.*?$', re.DOTALL)
+        start_matches = list(start_pattern.finditer(filtered_text))
+        for match in reversed(start_matches):
+            start, end = match.span()
+            matched_content = match.group(0)
+            filtered_items.append({
+                'rule_name': '不完整details开始标签',
+                'content': matched_content,
+                'position': (start, end)
+            })
+            filtered_text = filtered_text[:start] + filtered_text[end:]
+
+        # 4. 处理不完整的details结束标签
+        end_pattern = re.compile(r'^.*?</details>', re.DOTALL)
+        end_matches = list(end_pattern.finditer(filtered_text))
+        for match in reversed(end_matches):
+            start, end = match.span()
+            matched_content = match.group(0)
+            filtered_items.append({
+                'rule_name': '不完整details结束标签',
+                'content': matched_content,
+                'position': (start, end)
+            })
+            filtered_text = filtered_text[:start] + filtered_text[end:]
+
+        # 5. 处理单独的summary标签
+        summary_pattern = re.compile(r'<summary>.*?</summary>', re.DOTALL)
+        summary_matches = list(summary_pattern.finditer(filtered_text))
+        for match in reversed(summary_matches):
+            start, end = match.span()
+            matched_content = match.group(0)
+            filtered_items.append({
+                'rule_name': '单独summary标签',
+                'content': matched_content,
+                'position': (start, end)
+            })
+            filtered_text = filtered_text[:start] + filtered_text[end:]
+
+        # 6. 处理任何包含details或summary的行
+        details_line_pattern = re.compile(r'.*?(?:details|summary).*?$', re.MULTILINE)
+        details_line_matches = list(details_line_pattern.finditer(filtered_text))
+        for match in reversed(details_line_matches):
+            start, end = match.span()
+            matched_content = match.group(0)
+            if '<' in matched_content or '>' in matched_content:  # 只过滤包含尖括号的行
+                filtered_items.append({
+                    'rule_name': '包含details或summary的行',
+                    'content': matched_content,
+                    'position': (start, end)
+                })
+                filtered_text = filtered_text[:start] + filtered_text[end:]
+
+        # 应用常规规则
+        result_text, more_items = self._apply_rules(filtered_text)
+        filtered_items.extend(more_items)
+
+        # 最终清理
+        result_text = self._final_cleanup(result_text)
+
+        # 记录过滤结果
+        if filtered_items:
+            logger.info(f"已过滤 {len(filtered_items)} 处内容，原文本长度: {len(text)}，过滤后长度: {len(result_text)}")
+
+        return result_text, filtered_items
+
+    def _apply_rules(self, text: str) -> Tuple[str, List[Dict]]:
+        """应用所有过滤规则"""
         filtered_text = text
         filtered_items = []
 
@@ -164,15 +265,22 @@ class TextFilter:
                 # 替换文本
                 filtered_text = filtered_text[:start] + filtered_text[end:]
 
-        # 清理多余的空行
-        filtered_text = re.sub(r'\n{3,}', '\n\n', filtered_text)
-        filtered_text = filtered_text.strip()
-
-        # 记录过滤结果
-        if filtered_items:
-            logger.info(f"已过滤 {len(filtered_items)} 处内容，原文本长度: {len(text)}，过滤后长度: {len(filtered_text)}")
-
         return filtered_text, filtered_items
+
+    def _final_cleanup(self, text: str) -> str:
+        """最终清理步骤"""
+        # 1. 清理所有HTML标签
+        cleaned_text = re.sub(r'<[^>]*>', '', text)
+
+        # 2. 清理可能的DOI和Issue引用
+        cleaned_text = re.sub(r'DOI:.*?(?=\n|$)', '', cleaned_text)
+        cleaned_text = re.sub(r'Issue\s+\d+.*?(?=\n|$)', '', cleaned_text)
+
+        # 3. 清理多余的空行
+        cleaned_text = re.sub(r'\n{3,}', '\n\n', cleaned_text)
+        cleaned_text = cleaned_text.strip()
+
+        return cleaned_text
 
 # 创建全局过滤器实例
 text_filter = TextFilter()

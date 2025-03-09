@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:33.893707",
+  "request_id": "164a7bdf",
+  "original_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[14]: Mum reveals tragic details of Simone White’s death after methanol poisoning in Laos</summary>\nThere have been more arrests over the methanol poisoning deaths of two young Australians in Laos.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  },
+  "filtered_text": null
+}

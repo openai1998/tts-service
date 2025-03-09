@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:45.400549",
+  "request_id": "3e8bc4a9",
+  "raw_request_body": "{\"input\": \"For more Travel stories from the BBC, follow us on Facebook, X and Instagram.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "For more Travel stories from the BBC, follow us on Facebook, X and Instagram.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

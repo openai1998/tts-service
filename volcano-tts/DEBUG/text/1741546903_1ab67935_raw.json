@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:43.371474",
+  "request_id": "1ab67935",
+  "raw_request_body": "{\"input\": \"News reports say the tourists could have drunk alcohol laced with methanol, a toxic industrial chemical.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "News reports say the tourists could have drunk alcohol laced with methanol, a toxic industrial chemical.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

@@ -4,21 +4,22 @@ WORKDIR /app
 
 # 安装依赖
 COPY requirements.txt .
-RUN pip install -r requirements.txt && \
-    # 确保python-dotenv被安装，用于加载.env文件
-    pip install python-dotenv --no-cache-dir
-
-# 创建日志目录
-RUN mkdir -p /app/logs && chmod 777 /app/logs
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 复制应用代码
 COPY . .
+
+# 创建必要的目录并设置权限
+RUN mkdir -p logs DEBUG/text DEBUG/audio && \
+    chmod -R 777 logs DEBUG && \
+    chown -R nobody:nogroup logs DEBUG && \
+    ls -la DEBUG
 
 # 暴露端口
 EXPOSE 5050
 
 # 设置卷挂载点
-VOLUME ["/app/logs"]
+VOLUME ["/app/logs", "/app/DEBUG"]
 
 # 启动应用
-CMD ["python", "app.py"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5050", "--log-level", "debug"]

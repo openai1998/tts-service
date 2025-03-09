@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:10.342237",
+  "request_id": "ba53527c",
+  "raw_request_body": "{\"input\": \"... That's all from our federal politics blog this week.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "... That's all from our federal politics blog this week.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

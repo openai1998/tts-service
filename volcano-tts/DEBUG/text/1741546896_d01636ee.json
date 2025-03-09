@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:36.944661",
+  "request_id": "d01636ee",
+  "original_request": {
+    "model": "tts-1",
+    "input": "No charged have been laid in the latest arrests. \nLink\n</details>\n<details><summary>资料[15]: Laos police arrest three more hostel staff despite government document pointing to factory as source of methanol poisoning  ABC News</summary>\nOn Friday, Australian government website Smartraveller issued a fresh warning about drinking in Laos — urging Australians to avoid Tiger Vodka and Tiger Whisky due to \"serious safety concerns\".",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  },
+  "filtered_text": null
+}

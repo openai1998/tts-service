@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:30.972263",
+  "request_id": "4da0645d",
+  "original_request": {
+    "model": "tts-1",
+    "input": "Medical specialists say drinking as little as 25 millilitres of methanol can be fatal, but it is sometimes added to drinks because it is cheaper than alcohol.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  },
+  "filtered_text": null
+}

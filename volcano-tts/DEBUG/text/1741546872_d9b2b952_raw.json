@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:12.576610",
+  "request_id": "d9b2b952",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[7]: Laos methanol poisoning update after two Melbourne teens among six tourists killed</summary>\\nDeputy Prime Minister Richard Marles on Thursday told parliament the government of Laos is yet to take up Australian Federal Police support in the investigation into the deaths of six foreign tourists \\u2013 including the two Melbourne teens.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[7]: Laos methanol poisoning update after two Melbourne teens among six tourists killed</summary>\nDeputy Prime Minister Richard Marles on Thursday told parliament the government of Laos is yet to take up Australian Federal Police support in the investigation into the deaths of six foreign tourists – including the two Melbourne teens.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

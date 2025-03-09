@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:14.658779",
+  "request_id": "32484c84",
+  "raw_request_body": "{\"input\": \"\\\"When you're getting second hand information... it was really hard to process exactly what sort of condition that they were in,\\\" said Shaun.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\"When you're getting second hand information... it was really hard to process exactly what sort of condition that they were in,\" said Shaun.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

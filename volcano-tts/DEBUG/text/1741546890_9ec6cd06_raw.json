@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:30.177809",
+  "request_id": "9ec6cd06",
+  "raw_request_body": "{\"input\": \"Their drinks are thought to have contained methanol  a deadly substance often found in bootleg alcohol.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Their drinks are thought to have contained methanol  a deadly substance often found in bootleg alcohol.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

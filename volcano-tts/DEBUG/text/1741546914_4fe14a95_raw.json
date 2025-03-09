@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:54.581700",
+  "request_id": "4fe14a95",
+  "raw_request_body": "{\"input\": \"\\u7532\\u9187\\u4e2d\\u6bd2\\u4e8b\\u4ef6\\u540e\\u7eed  \\n   \\u53bb\\u5e74 11 \\u6708\\uff0c\\u4e07\\u8363\\u53d1\\u751f\\u7684\\u7532\\u9187\\u4e2d\\u6bd2\\u4e8b\\u4ef6\\u5bfc\\u81f4 6 \\u540d\\u5916\\u56fd\\u6e38\\u5ba2\\u6b7b\\u4ea1\\uff08\\u5305\\u62ec\\u4e24\\u540d\\u6fb3\\u5927\\u5229\\u4e9a\\u5c11\\u5973\\uff09\\uff0c\\u81f3\\u4eca\\u4ecd\\u6709\\u4f59\\u6ce2\\u30022 \\u6708\\uff0c\\u6fb3\\u5927\\u5229\\u4e9a\\u6559\\u80b2\\u90e8\\u957f\\u8868\\u793a\\uff0c\\u8001\\u631d\\u5c1a\\u672a\\u63a5\\u53d7\\u6fb3\\u5927\\u5229\\u4e9a\\u8054\\u90a6\\u8b66\\u5bdf\\u7684\\u8c03\\u67e5\\u534f\\u52a9\\uff0c\\u4ee4\\u4eba\\u5931\\u671b\\u3002\\u8001\\u631d\\u8b66\\u65b9\\u902e\\u6355\\u4e86\\u591a\\u5bb6\\u65c5\\u9986\\u5458\\u5de5\\uff0c\\u4f46\\u653f\\u5e9c\\u6587\\u4ef6\\u663e\\u793a\\uff0c\\u6bd2\\u9152\\u53ef\\u80fd\\u6765\\u81ea\\u4e07\\u8c61\\u9644\\u8fd1\\u4e00\\u5bb6\\u5de5\\u5382\\u3002\\u76ee\\u524d\\uff0c\\u6fb3\\u5927\\u5229\\u4e9a\\u4ecd\\u8b66\\u544a\\u6e38\\u5ba2\\u907f\\u514d\\u996e\\u7528 Tiger Vodka \\u548c Tiger Whisky\\u3002\\n5.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "甲醇中毒事件后续  \n   去年 11 月，万荣发生的甲醇中毒事件导致 6 名外国游客死亡（包括两名澳大利亚少女），至今仍有余波。2 月，澳大利亚教育部长表示，老挝尚未接受澳大利亚联邦警察的调查协助，令人失望。老挝警方逮捕了多家旅馆员工，但政府文件显示，毒酒可能来自万象附近一家工厂。目前，澳大利亚仍警告游客避免饮用 Tiger Vodka 和 Tiger Whisky。\n5.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

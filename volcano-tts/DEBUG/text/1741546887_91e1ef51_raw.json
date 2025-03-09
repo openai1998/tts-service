@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:27.389091",
+  "request_id": "91e1ef51",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[12]: \\u2018I knew she was going to die,\\u2019 says mother of Laos poisoning victim</summary>\\nAnd unlike many other quality news outlets, we choose not to lock Americans out of our reporting and analysis with paywalls.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[12]: ‘I knew she was going to die,’ says mother of Laos poisoning victim</summary>\nAnd unlike many other quality news outlets, we choose not to lock Americans out of our reporting and analysis with paywalls.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

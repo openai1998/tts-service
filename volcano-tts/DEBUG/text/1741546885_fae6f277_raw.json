@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:25.860266",
+  "request_id": "fae6f277",
+  "raw_request_body": "{\"input\": \"... The rock band became known for their hedonistic parties.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "... The rock band became known for their hedonistic parties.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

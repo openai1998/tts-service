@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:26.590771",
+  "request_id": "6273fe4c",
+  "raw_request_body": "{\"input\": \"Learn more English vocabulary from the news with our News Review archive.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Learn more English vocabulary from the news with our News Review archive.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

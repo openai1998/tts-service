@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:15.568720",
+  "request_id": "c2665409",
+  "raw_request_body": "{\"input\": \"He and Bianca's father, Mark, flew out the next day, by which point the girls were in a hospital in Udon Thani, over the border from Laos in Thailand.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "He and Bianca's father, Mark, flew out the next day, by which point the girls were in a hospital in Udon Thani, over the border from Laos in Thailand.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

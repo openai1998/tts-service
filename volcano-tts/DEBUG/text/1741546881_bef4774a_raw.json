@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:21.426654",
+  "request_id": "bef4774a",
+  "raw_request_body": "{\"input\": \"In a statement, her family thanked the Australian public for their support and compassion, saying it had been a source of strength and comfort.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "In a statement, her family thanked the Australian public for their support and compassion, saying it had been a source of strength and comfort.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

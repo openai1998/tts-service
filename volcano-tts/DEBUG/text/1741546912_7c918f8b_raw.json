@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:52.986475",
+  "request_id": "7c918f8b",
+  "raw_request_body": "{\"input\": \"\\u8d8a\\u5357\\u4e0e\\u8001\\u631d\\u52a0\\u5f3a\\u56fd\\u9632\\u5408\\u4f5c  \\n   3 \\u6708 5 \\u65e5\\uff0c\\u8d8a\\u5357\\u65b0\\u95fb\\u62a5\\u9053\\uff0c\\u8d8a\\u5357\\u56fd\\u9632\\u90e8\\u957f\\u6f58\\u6587\\u6c5f\\u4f1a\\u89c1\\u8001\\u631d\\u4eba\\u6c11\\u519b\\u603b\\u53c2\\u8c0b\\u957f Saichay Kommasith\\uff0c\\u53cc\\u65b9\\u5f3a\\u8c03\\u56fd\\u9632\\u5408\\u4f5c\\u662f\\u4e24\\u56fd\\u5173\\u7cfb\\u7684\\u5173\\u952e\\u652f\\u67f1\\u3002\\u91cd\\u70b9\\u5305\\u62ec\\u4eba\\u5458\\u57f9\\u8bad\\u3001\\u8fb9\\u5883\\u7ba1\\u7406\\u548c\\u652f\\u6301\\u8001\\u631d\\u7ec4\\u5efa\\u8054\\u5408\\u56fd\\u7ef4\\u548c\\u90e8\\u961f\\u3002\\u6b64\\u5916\\uff0c\\u8001\\u631d\\u4e0e\\u8d8a\\u5357\\u7b7e\\u7ea6\\u5f00\\u53d1 1200 \\u5146\\u74e6\\u98ce\\u7535\\u9879\\u76ee\\uff0c\\u9884\\u8ba1 2027 \\u5e74\\u5e95\\u5411\\u8d8a\\u5357\\u4f9b\\u7535\\u3002\\n4.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "越南与老挝加强国防合作  \n   3 月 5 日，越南新闻报道，越南国防部长潘文江会见老挝人民军总参谋长 Saichay Kommasith，双方强调国防合作是两国关系的关键支柱。重点包括人员培训、边境管理和支持老挝组建联合国维和部队。此外，老挝与越南签约开发 1200 兆瓦风电项目，预计 2027 年底向越南供电。\n4.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

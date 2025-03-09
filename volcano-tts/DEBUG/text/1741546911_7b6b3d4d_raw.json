@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:51.078107",
+  "request_id": "7b6b3d4d",
+  "raw_request_body": "{\"input\": \"\\u4e07\\u8363\\u65c5\\u6e38\\u76ee\\u6807\\uff1a2025 \\u5e74\\u5438\\u5f15 200 \\u4e07\\u6e38\\u5ba2  \\n   3 \\u6708 6 \\u65e5\\uff0c\\u65b0\\u534e\\u793e\\u62a5\\u9053\\uff0c\\u8001\\u631d\\u5f53\\u5c40\\u8ba1\\u5212\\u901a\\u8fc7\\u63a8\\u5e7f\\u4f20\\u7edf\\u8282\\u65e5\\uff08\\u5982\\u8001\\u631d\\u65b0\\u5e74\\uff09\\u548c\\u6539\\u5584\\u57fa\\u7840\\u8bbe\\u65bd\\uff0c\\u5c06\\u4e07\\u8363\\uff08Vangvieng\\uff09\\u6253\\u9020\\u6210\\u56fd\\u5bb6\\u7ea7\\u65c5\\u6e38\\u666f\\u70b9\\uff0c\\u76ee\\u6807\\u662f 2025 \\u5e74\\u5438\\u5f15 200 \\u4e07\\u6e38\\u5ba2\\u3002\\u8fd9\\u5ea7\\u65c5\\u6e38\\u5c0f\\u9547\\u56e0\\u5176\\u81ea\\u7136\\u7f8e\\u666f\\u548c\\u8fc7\\u53bb\\u7684\\u6d3e\\u5bf9\\u6587\\u5316\\u800c\\u95fb\\u540d\\uff0c\\u76ee\\u524d\\u6b63\\u52aa\\u529b\\u63d0\\u5347\\u5f62\\u8c61\\u3002\\n3.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "万荣旅游目标：2025 年吸引 200 万游客  \n   3 月 6 日，新华社报道，老挝当局计划通过推广传统节日（如老挝新年）和改善基础设施，将万荣（Vangvieng）打造成国家级旅游景点，目标是 2025 年吸引 200 万游客。这座旅游小镇因其自然美景和过去的派对文化而闻名，目前正努力提升形象。\n3.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

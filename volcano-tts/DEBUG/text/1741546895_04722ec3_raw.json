@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:35.026968",
+  "request_id": "04722ec3",
+  "raw_request_body": "{\"input\": \"Eight Vietnamese staff members from the Nana Backpackers hostel in the tourist town of Vang Vieng were arrested last week and the hostel was shut down.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Eight Vietnamese staff members from the Nana Backpackers hostel in the tourist town of Vang Vieng were arrested last week and the hostel was shut down.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

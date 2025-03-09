@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:07.009990",
+  "request_id": "3ea8a308",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[2]: Vi\\u1ec7t Nam, Laos enhance defence cooperation</summary>\\nH\\u00c0 N\\u1ed8I \\u2014 Defence cooperation has remained a key pillar in Vi\\u1ec7t NamLaos relations, significantly strengthening political trust and the close bond between the two countries' armies, Minister of National Defence General Phan V\\u0103n Giang affirmed on Wednesday.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[2]: Việt Nam, Laos enhance defence cooperation</summary>\nHÀ NỘI — Defence cooperation has remained a key pillar in Việt NamLaos relations, significantly strengthening political trust and the close bond between the two countries' armies, Minister of National Defence General Phan Văn Giang affirmed on Wednesday.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

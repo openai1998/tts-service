@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:29.308365",
+  "request_id": "ef6a428d",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[13]: Simone White: Be careful drinking abroad, warns mum of woman who died in Laos</summary>\\nOn the night she fell ill, Simone and her friends drank six vodka shots served by Nana Backpackers hostel, according to the newspaper.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[13]: Simone White: Be careful drinking abroad, warns mum of woman who died in Laos</summary>\nOn the night she fell ill, Simone and her friends drank six vodka shots served by Nana Backpackers hostel, according to the newspaper.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

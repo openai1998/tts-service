@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:38.066234",
+  "request_id": "c6fb3047",
+  "raw_request_body": "{\"input\": \"Outside the factory, blue plastic was draped over stacks of bottles and Tiger packaging was seen on the ground.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Outside the factory, blue plastic was draped over stacks of bottles and Tiger packaging was seen on the ground.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

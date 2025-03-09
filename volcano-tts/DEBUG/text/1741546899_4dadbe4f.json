@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-03-10T03:01:39.094691",
+  "request_id": "4dadbe4f",
+  "original_request": {
+    "original": "(ABC News)\nLink\n</details>\n<details><summary>资料[16]: Les éléphants du Laos sontils condamnés ?</summary>\nAutrefois abondants dans les forêts du Laos, les éléphants d’Asie ont été décimés par la destruction de leur habitat, le travail exténuant de l’industrie forestière, le braconnage et la rareté des possibilités de reproduction."
+  },
+  "filtered_text": "ABC News \nLink\n\n资料 16 Les éléphants du Laos sontils condamnés \nAutrefois abondants dans les forêts du Laos les éléphants d Asie ont été décimés par la destruction de leur habitat le travail exténuant de l industrie forestière le braconnage et la rareté des possibilités de reproduction"
+}

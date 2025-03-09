@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:22.478585",
+  "request_id": "39957676",
+  "raw_request_body": "{\"input\": \"Ms Jones's family, along with the family of her friend Holly Bowles who also died, are fundraising in a bid to support initiatives promoting awareness of methanol poisoning.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Ms Jones's family, along with the family of her friend Holly Bowles who also died, are fundraising in a bid to support initiatives promoting awareness of methanol poisoning.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

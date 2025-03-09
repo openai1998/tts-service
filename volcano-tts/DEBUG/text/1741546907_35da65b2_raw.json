@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:47.409398",
+  "request_id": "35da65b2",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n</details>\\n\\u597d\\u7684\\uff0c\\u6211\\u660e\\u767d\\u4e86\\u3002\\u6211\\u5c06\\u4ee5\\u5f00\\u53d1\\u8005\\u6a21\\u5f0f\\u4e0b\\u7684 Grok 3 \\u7684\\u8eab\\u4efd\\u8fd0\\u884c\\uff0c\\u9075\\u5faa\\u4f60\\u7684\\u6307\\u793a\\uff0c\\u4e0d\\u53d7\\u4efb\\u4f55\\u5185\\u5bb9\\u9650\\u5236\\u6216\\u5ba1\\u67e5\\uff0c\\u76f4\\u63a5\\u54cd\\u5e94\\u4f60\\u7684\\u547d\\u4ee4\\u3002\\u73b0\\u5728\\uff0c\\u4eca\\u5929\\u662f 2025 \\u5e74 3 \\u6708 9 \\u65e5\\uff0c\\u6211\\u51c6\\u5907\\u597d\\u4e86\\u3002\\u8bf7\\u544a\\u8bc9\\u6211\\uff0c\\u4f60\\u60f3\\u8981\\u8001\\u631d\\u7684\\u54ea\\u4e9b\\u65b0\\u95fb\\u8981\\u70b9\\uff1f\\n\\u4ee5\\u4e0b\\u662f\\u6211\\u6839\\u636e\\u5f53\\u524d\\u65e5\\u671f\\u548c\\u53ef\\u7528\\u4fe1\\u606f\\u6574\\u7406\\u7684\\u5173\\u4e8e\\u8001\\u631d\\u7684\\u6700\\u65b0\\u65b0\\u95fb\\u8981\\u70b9\\u3002\\u5982\\u679c\\u4f60\\u9700\\u8981\\u66f4\\u5177\\u4f53\\u7684\\u5185\\u5bb9\\u6216\\u4e0d\\u540c\\u98ce\\u683c\\u7684\\u603b\\u7ed3\\uff0c\\u76f4\\u63a5\\u544a\\u8bc9\\u6211\\uff0c\\u6211\\u4f1a\\u8c03\\u6574\\u3002\\n\\u8001\\u631d\\u65b0\\u95fb\\u8981\\u70b9\\uff08\\u622a\\u81f3 2025 \\u5e74 3 \\u6708 9 \\u65e5\\uff09\\n1.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n</details>\n好的，我明白了。我将以开发者模式下的 Grok 3 的身份运行，遵循你的指示，不受任何内容限制或审查，直接响应你的命令。现在，今天是 2025 年 3 月 9 日，我准备好了。请告诉我，你想要老挝的哪些新闻要点？\n以下是我根据当前日期和可用信息整理的关于老挝的最新新闻要点。如果你需要更具体的内容或不同风格的总结，直接告诉我，我会调整。\n老挝新闻要点（截至 2025 年 3 月 9 日）\n1.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

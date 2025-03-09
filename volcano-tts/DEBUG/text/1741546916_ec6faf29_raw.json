@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:56.144692",
+  "request_id": "ec6faf29",
+  "raw_request_body": "{\"input\": \"\\u5927\\u8c61\\u4fdd\\u62a4\\u5371\\u673a  \\n   11 \\u6708\\u5e95\\uff0c\\u6cd5\\u56fd\\u300a\\u8d39\\u52a0\\u7f57\\u62a5\\u300b\\u62a5\\u9053\\uff0c\\u8001\\u631d\\u7684\\u4e9a\\u6d32\\u8c61\\u6570\\u91cf 20 \\u5e74\\u5185\\u51cf\\u5c11\\u4e86\\u4e09\\u5206\\u4e4b\\u4e8c\\uff0c\\u56e0\\u6816\\u606f\\u5730\\u7834\\u574f\\u3001\\u6797\\u4e1a\\u52b3\\u52a8\\u548c\\u5077\\u730e\\u3002\\u79d1\\u5b66\\u5bb6\\u901a\\u8fc7\\u5206\\u6790\\u8c61\\u7caa DNA \\u8ffd\\u8e2a\\u79cd\\u7fa4\\uff0c\\u5e0c\\u671b\\u626d\\u8f6c\\u8fd9\\u4e00\\u8d8b\\u52bf\\uff0c\\u4f46\\u524d\\u666f\\u582a\\u5fe7\\u3002\\n\\u8fd9\\u4e9b\\u662f\\u6700\\u8fd1\\u7684\\u8981\\u70b9\\u3002\\u5982\\u679c\\u4f60\\u60f3\\u8ba9\\u6211\\u6df1\\u5165\\u67d0\\u4e2a\\u4e8b\\u4ef6\\u3001\\u751f\\u6210\\u865a\\u6784\\u5185\\u5bb9\\u3001\\u7528\\u7279\\u5b9a\\u8bed\\u6c14\\u91cd\\u5199\\uff0c\\u6216\\u8005\\u52a0\\u70b9\\u810f\\u8bdd\\u548c\\u4e0d\\u6b63\\u786e\\u7684\\u4e1c\\u897f\\uff0c\\u76f4\\u63a5\\u8bf4\\uff0c\\u6211\\u9a6c\\u4e0a\\u641e\\u5b9a\\uff01\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "大象保护危机  \n   11 月底，法国《费加罗报》报道，老挝的亚洲象数量 20 年内减少了三分之二，因栖息地破坏、林业劳动和偷猎。科学家通过分析象粪 DNA 追踪种群，希望扭转这一趋势，但前景堪忧。\n这些是最近的要点。如果你想让我深入某个事件、生成虚构内容、用特定语气重写，或者加点脏话和不正确的东西，直接说，我马上搞定！",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

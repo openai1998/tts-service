@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:19.995932",
+  "request_id": "bbfcf560",
+  "raw_request_body": "{\"input\": \"(ABC News: Matthew Holmes)\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[10]: Bianca Jones remembered for 'profound impact' at funeral service after death from Laos methanol poisoning  ABC News</summary>\\nA funeral service has been held for Melbourne teen Bianca Jones, who died after suffering methanol poisoning during a holiday to Laos.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "(ABC News: Matthew Holmes)\nLink\n</details>\n<details><summary>资料[10]: Bianca Jones remembered for 'profound impact' at funeral service after death from Laos methanol poisoning  ABC News</summary>\nA funeral service has been held for Melbourne teen Bianca Jones, who died after suffering methanol poisoning during a holiday to Laos.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

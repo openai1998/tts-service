@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:31.922685",
+  "request_id": "5efa6515",
+  "raw_request_body": "{\"input\": \"Simone's two childhood friends who were travelling with her survived the experience, but are said to be traumatised.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Simone's two childhood friends who were travelling with her survived the experience, but are said to be traumatised.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:16.633567",
+  "request_id": "4ece9ff7",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[9]: Funeral held for muchloved Melbourne teen Holly MortonBowles after Laos methanol poisoning  ABC News</summary>\\nFriends and family \\u2014 some wearing pink and others with blue and yellow ribbons in their hair \\u2014 have gathered to farewell Holly MortonBowles, one of two Melbourne friends who died after consuming methanollaced drinks while on holiday in Laos.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[9]: Funeral held for muchloved Melbourne teen Holly MortonBowles after Laos methanol poisoning  ABC News</summary>\nFriends and family — some wearing pink and others with blue and yellow ribbons in their hair — have gathered to farewell Holly MortonBowles, one of two Melbourne friends who died after consuming methanollaced drinks while on holiday in Laos.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

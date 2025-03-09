@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:38.965666",
+  "request_id": "4dadbe4f",
+  "raw_request_body": "{\"input\": \"(ABC News)\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[16]: Les \\u00e9l\\u00e9phants du Laos sontils condamn\\u00e9s ?</summary>\\nAutrefois abondants dans les for\\u00eats du Laos, les \\u00e9l\\u00e9phants d\\u2019Asie ont \\u00e9t\\u00e9 d\\u00e9cim\\u00e9s par la destruction de leur habitat, le travail ext\\u00e9nuant de l\\u2019industrie foresti\\u00e8re, le braconnage et la raret\\u00e9 des possibilit\\u00e9s de reproduction.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "(ABC News)\nLink\n</details>\n<details><summary>资料[16]: Les éléphants du Laos sontils condamnés ?</summary>\nAutrefois abondants dans les forêts du Laos, les éléphants d’Asie ont été décimés par la destruction de leur habitat, le travail exténuant de l’industrie forestière, le braconnage et la rareté des possibilités de reproduction.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

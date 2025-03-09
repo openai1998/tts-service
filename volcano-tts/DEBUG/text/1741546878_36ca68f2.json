@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:18.994861",
+  "request_id": "36ca68f2",
+  "original_request": {
+    "model": "tts-1",
+    "input": "More than 700 people attended. Acting principal Peter Bartlett read out a statement on behalf of Ms MortonBowles's family.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  },
+  "filtered_text": null
+}

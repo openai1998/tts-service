@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:17.889231",
+  "request_id": "79354e4c",
+  "raw_request_body": "{\"input\": \"The funeral of the 19 year old, who died during a trip described as an adventure of a lifetime with her best friend Bianca Jones, was held at Beaumaris Secondary College, in Melbourne's southeast.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "The funeral of the 19 year old, who died during a trip described as an adventure of a lifetime with her best friend Bianca Jones, was held at Beaumaris Secondary College, in Melbourne's southeast.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

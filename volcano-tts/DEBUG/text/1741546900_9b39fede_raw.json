@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:40.346682",
+  "request_id": "9b39fede",
+  "raw_request_body": "{\"input\": \"\\nLink\\n</details>\\n<details><summary>\\u8d44\\u6599[17]: Australia warns travellers against Laos liquors Tiger Vodka and Tiger Whisky</summary>\\n\\\"I was happy to hear that there\\u2019s been some movement over in Laos  we cannot have our girls passing and this continuing to happen,\\\" Jones's father Mark told reporters earlier.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "\nLink\n</details>\n<details><summary>资料[17]: Australia warns travellers against Laos liquors Tiger Vodka and Tiger Whisky</summary>\n\"I was happy to hear that there’s been some movement over in Laos  we cannot have our girls passing and this continuing to happen,\" Jones's father Mark told reporters earlier.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

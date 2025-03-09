@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:33.048920",
+  "request_id": "e834c90c",
+  "raw_request_body": "{\"input\": \"Police in Laos have detained several people in connection with the death of Simone White and five others.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "Police in Laos have detained several people in connection with the death of Simone White and five others.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

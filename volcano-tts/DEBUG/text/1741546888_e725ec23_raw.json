@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:28.447085",
+  "request_id": "e725ec23",
+  "raw_request_body": "{\"input\": \"We believe quality journalism should be available to everyone, paid for by those who can afford it.Your support makes all the difference.Read more \\u00b7 The mother of a London lawyer who died after drinking contaminated vodka while travelling in Laos has recalled her \\u201chorrendous\\u201d journey to be at her daughter\\u2019s bedside.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "We believe quality journalism should be available to everyone, paid for by those who can afford it.Your support makes all the difference.Read more · The mother of a London lawyer who died after drinking contaminated vodka while travelling in Laos has recalled her “horrendous” journey to be at her daughter’s bedside.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

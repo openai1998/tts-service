@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-03-10T03:01:25.041823",
+  "request_id": "cae579e4",
+  "raw_request_body": "{\"input\": \"The company had to recall the tainted meat. ... Seeing the destruction caused by the earthquake sent a chill through the rescue team.\", \"voice\": \"zh_female_sichuan\", \"model\": \"tts-1\"}",
+  "parsed_request": {
+    "model": "tts-1",
+    "input": "The company had to recall the tainted meat. ... Seeing the destruction caused by the earthquake sent a chill through the rescue team.",
+    "voice": "zh_female_sichuan",
+    "response_format": "mp3",
+    "stream": false
+  }
+}

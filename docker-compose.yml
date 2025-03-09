@@ -6,6 +6,7 @@ services:
       - "5050:5050"  # 格式: "宿主机端口:容器端口"
     volumes:
       - ./volcano-tts/logs:/app/logs  # 日志目录映射
+      - ./volcano-tts/DEBUG:/app/DEBUG  # 添加DEBUG目录映射
       # 可以选择挂载.env文件或直接使用环境变量
       - ./volcano-tts/.env:/app/.env  # 配置文件映射
     restart: unless-stopped  # 容器停止时自动重启
@@ -30,3 +31,10 @@ services:
       # - LOG_FILE_PATH=logs/volcano-tts.log
       # - LOG_ROTATION=1 MB
       # - LOG_RETENTION=30 days
+
+      # 调试配置
+      - DEBUG_MODE=true
+      - DEBUG_SAVE_TEXT=true
+      - DEBUG_SAVE_AUDIO=true
+      # - DEBUG_MAX_FILES=100
+      # - DEBUG_DIR=/app/DEBUG

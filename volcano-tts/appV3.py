@@ -13,11 +13,6 @@ import concurrent.futures
 import time
 from typing import List, Generator
 from functools import lru_cache
-import warnings
-import urllib3
-
-# 禁用不安全请求警告
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 配置日志
 logging.basicConfig(level=logging.INFO)  # 将默认日志级别改为INFO，减少不必要的输出
@@ -173,11 +168,7 @@ PERFORMANCE_METRICS = {
     "failed_requests": 0,
     "avg_response_time": 0,
     "cache_hits": 0,
-    "cache_misses": 0,
-    "stream_requests": 0,
-    "parallel_requests": 0,
-    "total_audio_size": 0,
-    "avg_segment_size": 0
+    "cache_misses": 0
 }
 
 # 验证API密钥的依赖函数
@@ -258,7 +249,7 @@ def split_text(text: str, max_length: int = MAX_TEXT_LENGTH) -> List[str]:
     return segments
 
 # 使用LRU缓存来缓存TTS结果，提高性能
-@lru_cache(maxsize=200)  # 增加缓存容量
+@lru_cache(maxsize=100)
 def get_segment_audio_cached(text: str, speaker: str, lang: str) -> bytes:
     """获取单个文本段落的音频数据（带缓存）"""
     PERFORMANCE_METRICS["cache_hits"] += 1
@@ -283,103 +274,113 @@ def get_segment_audio(text: str, speaker: str, lang: str) -> bytes:
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
     }
 
-    # 使用已知可行的请求格式
-    payload = {
-        "text": text,
-        "speaker": speaker,
-        "language": lang
-    }
+    # 尝试不同的URL路径和请求体格式
+    url_and_payload_formats = [
+        # 包装在type/payload中
+        {
+            "url": "https://translate.volcengine.com/crx/tts/v1/",
+            "payload": {
+                "type": "Json",
+                "payload": {
+                    "text": text,
+                    "speaker": speaker,
+                    "language": lang
+                }
+            }
+        },
+        # 原始格式
+        {
+            "url": "https://translate.volcengine.com/crx/tts/v1/",
+            "payload": {
+                "text": text,
+                "speaker": speaker,
+                "language": lang
+            }
+        }
+    ]
 
-    try:
-        logger.info(f"Processing text segment with params: text_length={len(text)}, speaker={speaker}, lang={lang}")
-        logger.info(f"Request payload: {json.dumps(payload, ensure_ascii=False)}")
+    response = None
+    last_error = None
 
-        # 使用持久会话发送请求
-        response = session.post(
-            "https://translate.volcengine.com/crx/tts/v1/",
-            headers=headers,
-            json=payload,
-            verify=False,
-            timeout=10
-        )
+    for config in url_and_payload_formats:
+        try:
+            url = config["url"]
+            payload = config["payload"]
 
-        if response.status_code != 200:
-            error_msg = f"HTTP请求错误:\n状态码: {response.status_code}\n响应内容: {response.text}\n请求内容: {json.dumps(payload, ensure_ascii=False)}"
-            logger.error(error_msg)
-            raise Exception(error_msg)
+            logger.info(f"Processing text segment (length: {len(text)})")
 
-        # 解析响应
-        result = response.json()
-        logger.info(f"Response status: {response.status_code}, content_type: {response.headers.get('content-type')}")
+            # 使用持久会话发送请求
+            response = session.post(
+                url,
+                headers=headers,
+                json=payload,
+                verify=False,
+                timeout=10
+            )
 
-        # 检查是否有音频数据
-        if not result.get("audio") or not result["audio"].get("data"):
-            error_msg = f"未获取到音频数据，完整响应: {json.dumps(result, ensure_ascii=False)}"
-            logger.error(error_msg)
-            raise Exception(error_msg)
+            # 如果请求成功，跳出循环
+            if response.status_code == 200:
+                break
 
-        # 获取Base64编码的音频数据并解码
-        audio_data = base64.b64decode(result["audio"]["data"])
+            last_error = f"HTTP请求错误，状态码: {response.status_code}\n{response.text}"
+        except Exception as e:
+            logger.exception(f"Error trying {url}: {e}")
+            last_error = str(e)
 
-        # 更新性能指标
-        process_time = time.time() - start_time
-        PERFORMANCE_METRICS["avg_response_time"] = (
-            (PERFORMANCE_METRICS["avg_response_time"] * PERFORMANCE_METRICS["total_requests"] + process_time) /
-            (PERFORMANCE_METRICS["total_requests"] + 1) if PERFORMANCE_METRICS["total_requests"] > 0 else process_time
-        )
+    # 如果所有URL都失败了
+    if response is None or response.status_code != 200:
+        logger.error(f"All URLs failed. Last error: {last_error}")
+        raise Exception(f"TTS generation failed: {last_error}")
 
-        logger.info(f"Successfully generated audio segment, size: {len(audio_data)} bytes, time: {process_time:.2f}s")
-        return audio_data
+    # 解析响应
+    result = response.json()
 
-    except Exception as e:
-        logger.error(f"Error generating audio: {str(e)}")
-        raise
+    # 检查是否有音频数据
+    if not result.get("audio") or not result["audio"].get("data"):
+        logger.error(f"未获取到音频数据: {result}")
+        raise Exception(f"Invalid response format: {result}")
+
+    # 获取Base64编码的音频数据
+    base64_data = result["audio"]["data"]
+
+    # 解码Base64数据
+    audio_data = base64.b64decode(base64_data)
+
+    # 更新性能指标
+    process_time = time.time() - start_time
+    PERFORMANCE_METRICS["avg_response_time"] = (
+        (PERFORMANCE_METRICS["avg_response_time"] * PERFORMANCE_METRICS["total_requests"] + process_time) /
+        (PERFORMANCE_METRICS["total_requests"] + 1) if PERFORMANCE_METRICS["total_requests"] > 0 else process_time
+    )
+
+    logger.info(f"Successfully generated audio segment, size: {len(audio_data)} bytes, time: {process_time:.2f}s")
+
+    return audio_data
 
 # 并行处理多个文本段落
 async def process_segments_parallel(segments: List[str], speaker: str, lang: str) -> List[bytes]:
     """并行处理多个文本段落"""
-    # 根据CPU核心数和段落数量动态调整工作线程数
-    optimal_workers = min(len(segments), MAX_WORKERS)
-
-    with concurrent.futures.ThreadPoolExecutor(max_workers=optimal_workers) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         loop = asyncio.get_event_loop()
-        # 创建任务列表
-        tasks = []
-        for segment in segments:
-            # 检查缓存
-            try:
-                # 尝试从缓存获取
-                if get_segment_audio_cached.cache_info().currsize > 0:
-                    audio_data = get_segment_audio_cached(segment, speaker, lang)
-                    tasks.append(loop.create_task(asyncio.sleep(0, result=audio_data)))
-                    continue
-            except Exception:
-                pass
-
-            # 如果缓存未命中，创建新的处理任务
-            task = loop.run_in_executor(
+        futures = [
+            loop.run_in_executor(
                 executor,
-                get_segment_audio_cached,
+                get_segment_audio_cached,  # 使用缓存版本
                 segment,
                 speaker,
                 lang
             )
-            tasks.append(task)
-
-        # 等待所有任务完成
-        return await asyncio.gather(*tasks)
+            for segment in segments
+        ]
+        return await asyncio.gather(*futures)
 
 # 流式生成音频数据
 def generate_audio_stream(text_segments: List[str], speaker: str, lang: str) -> Generator[bytes, None, None]:
     """流式生成音频数据"""
     for segment in text_segments:
         try:
-            # 尝试从缓存获取
             audio_data = get_segment_audio_cached(segment, speaker, lang)
-            # 分块发送音频数据
-            chunk_size = 32768  # 32KB chunks
-            for i in range(0, len(audio_data), chunk_size):
-                yield audio_data[i:i + chunk_size]
+            yield audio_data
         except Exception as e:
             logger.error(f"Error generating audio for segment: {e}")
             # 继续处理下一段，而不是中断整个流
@@ -427,36 +428,21 @@ async def log_requests(request: Request, call_next):
 @app.post("/v1/audio/speech")
 async def create_speech(request: TTSRequest, _: bool = Depends(verify_api_key)):
     try:
-        # 记录请求开始时间
-        start_time = time.time()
-
         # 记录请求
         logger.info(f"TTS request received: voice={request.voice}, text_length={len(request.input)}, stream={request.stream}")
 
-        # 确定语言和说话人
+        # 确定语言
         lang = "zh"  # 默认中文
         speaker = request.voice
 
-        # 如果传入的是语音名称而不是ID，尝试查找对应的ID
-        voice_id_found = False
-        for lang_code, voice_dict in VOICE_CONFIG.items():
-            # 通过名称查找ID
-            for voice_id, voice_name in voice_dict.items():
-                if voice_name == speaker:
-                    speaker = voice_id
-                    lang = LANGUAGE_MAP.get(lang_code, "zh")
-                    voice_id_found = True
-                    break
-            # 通过ID查找
-            if not voice_id_found and speaker in voice_dict:
+        # 从声音确定语言
+        for lang_code, voices in VOICE_CONFIG.items():
+            if speaker in voices:
                 lang = LANGUAGE_MAP.get(lang_code, "zh")
-                voice_id_found = True
-                break
-            if voice_id_found:
                 break
 
         # 如果没找到指定的声音，使用默认话者
-        if not voice_id_found:
+        if not any(speaker in voices for voices in VOICE_CONFIG.values()):
             logger.warning(f"Voice {speaker} not found, using default voice")
             lang = "zh"
             speaker = DEFAULT_SPEAKERS["zh_cn"]
@@ -464,12 +450,6 @@ async def create_speech(request: TTSRequest, _: bool = Depends(verify_api_key)):
         # 分割长文本
         text_segments = split_text(request.input)
         logger.info(f"Text split into {len(text_segments)} segments")
-
-        # 更新性能指标
-        if request.stream:
-            PERFORMANCE_METRICS["stream_requests"] += 1
-        if len(text_segments) > 1:
-            PERFORMANCE_METRICS["parallel_requests"] += 1
 
         # 流式响应
         if request.stream:
@@ -491,25 +471,12 @@ async def create_speech(request: TTSRequest, _: bool = Depends(verify_api_key)):
             # 单段处理
             all_audio_data = get_segment_audio_cached(text_segments[0], speaker, lang)
 
-        # 更新性能指标
-        process_time = time.time() - start_time
-        PERFORMANCE_METRICS["total_audio_size"] += len(all_audio_data)
-        PERFORMANCE_METRICS["avg_segment_size"] = (
-            PERFORMANCE_METRICS["total_audio_size"] / PERFORMANCE_METRICS["successful_requests"]
-            if PERFORMANCE_METRICS["successful_requests"] > 0 else 0
-        )
-
-        logger.info(f"Successfully generated complete audio, size: {len(all_audio_data)} bytes, time: {process_time:.2f}s")
+        logger.info(f"Successfully generated complete audio, total size: {len(all_audio_data)} bytes")
 
         # 返回合并后的MP3音频数据
         return Response(
             content=bytes(all_audio_data),
-            media_type="audio/mp3",
-            headers={
-                "X-Process-Time": str(process_time),
-                "X-Segments-Count": str(len(text_segments)),
-                "X-Cache-Info": str(get_segment_audio_cached.cache_info())
-            }
+            media_type="audio/mp3"
         )
 
     except Exception as e:
@@ -526,18 +493,20 @@ async def list_voices(_: bool = Depends(verify_api_key)):
             voice = {
                 "id": voice_id,
                 "name": voice_name,
-                "model": "tts-1",  # 添加固定的模型标识
-                "voice_id": voice_id,  # 保持兼容性
+                "voice_id": voice_id,  # 添加这个字段以兼容某些客户端
                 "preview_url": None,
                 "language": lang_code,
                 "language_code": LANGUAGE_MAP.get(lang_code, "zh"),
-                "description": voice_name,  # 简化描述，只显示中文名称
+                "description": f"{voice_name} ({lang_code})",
                 "is_default": voice_id == DEFAULT_SPEAKERS.get(lang_code)
             }
             voices.append(voice)
 
     # 返回完全兼容OpenAI格式的响应
-    return voices  # 直接返回语音列表，不包装在 object 和 data 中
+    return {
+        "object": "list",
+        "data": voices
+    }
 
 @app.get("/stats")
 async def get_stats(_: bool = Depends(verify_api_key)):
